@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Shri ♥ Tushar</title>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{--a:#061a4a;--b:#0b3bb0;--c:#2f7bff;--d:#8ec5ff;--e:#eaf5ff;--ease:cubic-bezier(.22,1,.36,1);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:inherit}html{scroll-behavior:smooth}
+body{margin:0;font-family:Quicksand,system-ui,sans-serif;color:var(--e);background:#061a4a;overflow-x:hidden;font-size:1.08rem;line-height:1.6}
+.bg{position:fixed;inset:0;z-index:0;background:linear-gradient(160deg,#061a4a,#0b3bb0 60%,#1c63e8);overflow:hidden}
+.bg i{position:absolute;width:60vmax;height:60vmax;border-radius:50%;filter:blur(70px);opacity:.45;will-change:transform}
+.bg i:nth-child(1){background:#2f7bff;left:-20vmax;top:-15vmax;animation:d1 22s ease-in-out infinite alternate}
+.bg i:nth-child(2){background:#7ab6ff;right:-25vmax;bottom:-20vmax;animation:d2 26s ease-in-out infinite alternate}
+@keyframes d1{to{transform:translate3d(40vw,30vh,0) scale(1.15)}}
+@keyframes d2{to{transform:translate3d(-35vw,-25vh,0) scale(.9)}}
+#fx{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:50}
+.fl{position:fixed;left:0;bottom:-60px;z-index:1;pointer-events:none;will-change:transform;animation:up linear infinite;opacity:.6}
+@keyframes up{from{transform:translate3d(0,0,0) rotate(0)}50%{transform:translate3d(var(--x),-55vh,0) rotate(15deg)}to{transform:translate3d(0,-120vh,0) rotate(-10deg)}}
+nav{position:fixed;top:env(safe-area-inset-top,0px);left:0;right:0;z-index:20;display:flex;gap:.3rem;justify-content:center;flex-wrap:wrap;padding:.6rem;background:rgba(6,26,74,.5);backdrop-filter:blur(12px)}
+nav a{color:var(--e);text-decoration:none;padding:.35rem .9rem;border-radius:99px;font-weight:700;font-size:.9rem;transition:background .4s var(--ease),transform .4s var(--ease)}
+nav a:hover{background:var(--c);transform:scale(1.07)}
+section{position:relative;z-index:2;max-width:60rem;margin:auto;padding:6.5rem 1.4rem 3rem;text-align:center}
+h1,h2{font-family:Pacifico,cursive;font-weight:400;margin:0 0 1rem;text-shadow:0 0 25px var(--c)}
+h1{font-size:clamp(2.6rem,10vw,5rem)}h2{font-size:clamp(2rem,7vw,3.2rem)}
+.hero{min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.scene{perspective:700px;height:170px;margin-bottom:1rem}
+.heart3d{font-size:7.5rem;display:inline-block;animation:spin 7s linear infinite,beat 1.6s ease-in-out infinite;filter:drop-shadow(0 0 30px #5aa2ff);will-change:transform}
+@keyframes spin{to{transform:rotateY(360deg)}}
+@keyframes beat{50%{scale:1.15}}
+#type{min-height:3.2rem;font-size:1.25rem;color:var(--d)}
+.cur{animation:blink 1s infinite}@keyframes blink{50%{opacity:0}}
+.btn{font:700 1.05rem Quicksand;border:0;border-radius:99px;padding:.9rem 1.8rem;cursor:pointer;background:linear-gradient(135deg,#fff,var(--d));color:var(--a);box-shadow:0 8px 25px rgba(0,0,0,.25);transition:transform .5s var(--ease)}
+.btn:hover{transform:translateY(-3px) scale(1.05)}
+:focus-visible{outline:3px solid #fff;outline-offset:3px}
+.rev{opacity:0;transform:translate3d(0,36px,0);transition:opacity 1.1s var(--ease),transform 1.1s var(--ease)}
+.rev.in{opacity:1;transform:none}
+.grid{display:grid;gap:1.1rem;grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+.tilt{background:linear-gradient(145deg,rgba(255,255,255,.18),rgba(255,255,255,.05));border:1px solid rgba(255,255,255,.25);border-radius:24px;padding:1.6rem 1.2rem;backdrop-filter:blur(8px);will-change:transform}
+.tilt .em{font-size:2.6rem;display:block;animation:bob 4s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(-8px)}}
+.dist{position:relative;max-width:38rem;margin:2rem auto 1.5rem;height:90px}
+.dist .a,.dist .b{position:absolute;top:0;font-size:2.4rem}.dist .a{left:0}.dist .b{right:0}
+.dist small{position:absolute;top:3.1rem;font-weight:700;color:var(--d)}.dist .a+small{left:0}.dist .b+small{right:0}
+.dist .ln{position:absolute;left:3.2rem;right:3.2rem;top:1.5rem;border-top:3px dashed var(--d);opacity:.7}
+.dist .hr{position:absolute;left:3.2rem;right:3.2rem;top:0}
+.dist .hr b{position:absolute;left:0;top:0;font-size:1.9rem;font-weight:400;animation:go 5s ease-in-out infinite alternate;will-change:transform}
+@keyframes go{from{transform:translate3d(0,0,0)}to{transform:translate3d(calc(min(38rem,100vw - 2.8rem) - 9.4rem),0,0)}}
+.flip{position:relative;perspective:800px;height:200px;cursor:pointer;border:0;background:none;padding:0;color:inherit;font:inherit}
+.flip i{position:absolute;inset:0;transition:transform .9s var(--ease);transform-style:preserve-3d;display:block}
+.flip.on i{transform:rotateY(180deg)}
+.flip span{position:absolute;inset:0;backface-visibility:hidden;border-radius:24px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:1rem}
+.f{background:linear-gradient(135deg,var(--c),#7ab6ff);font-size:2.8rem}.f small{font-size:.95rem;margin-top:.4rem}
+.k{background:#fff;color:var(--a);transform:rotateY(180deg);font-weight:700}
+.tl{text-align:left;max-width:34rem;margin:auto;padding-left:2rem;border-left:3px dashed var(--d)}
+.tl div{position:relative;margin-bottom:1.6rem}.tl div::before{content:"💙";position:absolute;left:-2.95rem;top:0;background:var(--b);border-radius:50%}
+.letter{max-width:36rem;margin:auto;text-align:left;background:rgba(255,255,255,.95);color:var(--a);border-radius:22px;padding:2rem;box-shadow:0 20px 50px rgba(0,0,0,.3)}
+.letter h3{font-family:Pacifico;font-weight:400;margin-top:0;color:var(--b)}
+.row{position:relative;height:5.5rem;display:flex;gap:1rem;justify-content:center;align-items:flex-start;flex-wrap:wrap}
+#no{position:relative;background:rgba(255,255,255,.15);color:#fff;transition:left .5s var(--ease),top .5s var(--ease)}
+#yes{transition:scale .5s var(--ease)}
+#ans{font-family:Pacifico;font-size:1.8rem;display:none;margin-top:1rem}
+#ans.show{display:block;animation:pop 1s var(--ease)}@keyframes pop{from{opacity:0;transform:scale(.8)}}
+.fly{position:fixed;z-index:60;font-size:2rem;pointer-events:none;will-change:transform,opacity}
+footer{position:relative;z-index:2;text-align:center;padding:2rem;font-family:Pacifico}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rev{opacity:1;transform:none}}
+
+#talk{display:none;max-width:30rem;margin:1.5rem auto 0}
+#talk.show{display:block;animation:pop 1s var(--ease)}
+.chips{display:flex;flex-wrap:wrap;gap:.5rem;justify-content:center;margin-bottom:.9rem}
+.chip{font:700 .95rem Quicksand;border:1px solid rgba(255,255,255,.35);background:rgba(255,255,255,.12);color:#fff;border-radius:99px;padding:.5rem 1rem;cursor:pointer;transition:transform .4s var(--ease),background .4s}
+.chip:hover{background:var(--c);transform:translateY(-2px) scale(1.05)}
+.compose{display:flex;gap:.6rem}
+.compose input{flex:1;min-width:0;font:inherit;padding:.8rem 1.1rem;border-radius:99px;border:0;color:var(--a)}
+#st{min-height:1.6rem;margin-top:.7rem;color:var(--d);font-weight:700}
+</style></head><body>
+<div class="bg" aria-hidden="true"><i></i><i></i></div>
+<canvas id="fx" aria-hidden="true"></canvas>
+<nav><a href="#home">Home</a><a href="#why">Why you</a><a href="#us">Us</a><a href="#letter">Letter</a><a href="#ask">Forgive?</a></nav>
+
+<section class="hero" id="home">
+ <div class="scene"><span class="heart3d">💙</span></div>
+ <h1>Shri, I’m sorry</h1>
+ <div id="type"></div>
+ <button class="btn" id="hearts">Tap for hearts 💙</button>
+</section>
+
+<section id="why">
+ <h2 class="rev">Why you’re my favorite person</h2>
+ <div class="grid">
+  <div class="tilt rev"><span class="em">😊</span><b>Your smile</b><br>Even through a screen, it fixes my day.</div>
+  <div class="tilt rev"><span class="em">🤗</span><b>Your heart</b><br>So kind, even when I don’t deserve it.</div>
+  <div class="tilt rev"><span class="em">🌊</span><b>Your calm</b><br>Like the blue you love so much.</div>
+  <div class="tilt rev"><span class="em">✨</span><b>Your you-ness</b><br>No one else is like you.</div>
+ </div>
+</section>
+
+<section id="us">
+ <h2 class="rev">Far apart, still together</h2>
+ <p class="rev">We haven’t met yet, but you’re already the closest person to my heart.</p>
+ <div class="dist rev">
+  <span class="a">🧑</span><small>Tushar</small>
+  <span class="b">👧</span><small>Shri</small>
+  <div class="ln"></div><div class="hr"><b>💙</b></div>
+ </div>
+ <button class="btn rev" id="hug">Send Shri a hug 🤗</button>
+ <h2 class="rev" style="margin-top:3.5rem">What keeps us close</h2>
+ <div class="grid">
+  <button class="flip rev"><i><span class="f">📞<small>Our calls</small></span><span class="k">Hearing your voice is my favorite part of every day.</span></i></button>
+  <button class="flip rev"><i><span class="f">💬<small>Our texts</small></span><span class="k">Your messages make my phone feel like home.</span></i></button>
+  <button class="flip rev"><i><span class="f">🌍<small>The day we meet</small></span><span class="k">I’ll hold your hand first and never want to let go.</span></i></button>
+ </div>
+ <h2 class="rev" style="margin-top:3.5rem">What I’ll do now</h2>
+ <div class="tl">
+  <div class="rev"><b>Listen first.</b><br>Really hear you out.</div>
+  <div class="rev"><b>Be honest.</b><br>Even when it’s hard.</div>
+  <div class="rev"><b>Make time.</b><br>Every call, fully yours.</div>
+  <div class="rev"><b>Make you smile.</b><br>Every day, on purpose.</div>
+ </div>
+</section>
+
+<section id="letter">
+ <div class="letter rev">
+  <h3>Dear Shri,</h3>
+  <p>I know I made you angry and I’m truly sorry. You deserve better than how I acted, and I won’t make excuses.</p>
+  <p>We’re far apart, so I can’t hug you or hold your hand right now. That’s why it matters even more to show you with my words and my actions, every day.</p>
+  <p>Please give me a chance to make it right. I love you.</p>
+  <p style="text-align:right;font-family:Pacifico;color:#0b3bb0">Yours, Tushar 💙</p>
+ </div>
+</section>
+
+<section id="ask">
+ <h2 class="rev">Shri, will you forgive me?</h2>
+ <div class="row" id="row">
+  <button class="btn" id="yes">Yes 💙</button>
+  <button class="btn" id="no">No</button>
+ </div>
+ <div id="ans">Thank you, my love! 💙<br>Shri ♥ Tushar, forever.</div>
+ <div id="talk">
+  <p>Want to tell me something? Tap a quick message or type your own.</p>
+  <div class="chips">
+   <button class="chip">I love you 💙</button><button class="chip">I miss you 🥺</button><button class="chip">Call me 📞</button><button class="chip">Let’s talk 💬</button><button class="chip">Good night 🌙</button>
+  </div>
+  <div class="compose"><input id="msg" type="text" maxlength="400" placeholder="Type your message to Tushar" aria-label="Message to Tushar"><button class="btn" id="send">Send</button></div>
+  <div id="st" aria-live="polite"></div>
+ </div>
+</section>
+<footer>Made with all my love by Tushar, for Shri</footer>
+
+<script>
+const R=matchMedia('(prefers-reduced-motion:reduce)').matches;
+const $=id=>document.getElementById(id);
+// typewriter
+const msg="I made this just for you, my love. Please read till the end 💙";let ti=0;const T=$('type');
+(function t(){T.innerHTML=msg.slice(0,ti)+'<span class="cur">|</span>';if(ti++<msg.length)setTimeout(t,R?0:55)})();
+// floating hearts (GPU transforms only)
+if(!R)for(let i=0;i<16;i++){const s=document.createElement('span');s.className='fl';s.textContent=['💙','🩵','💎','✨'][i%4];
+ s.style.left=Math.random()*100+'vw';s.style.fontSize=(14+Math.random()*26)+'px';s.style.setProperty('--x',(Math.random()*80-40)+'px');
+ s.style.animationDuration=(14+Math.random()*14)+'s';s.style.animationDelay=(-Math.random()*28)+'s';document.body.appendChild(s)}
+// canvas particles using a pre-rendered heart sprite
+const cv=$('fx'),cx=cv.getContext('2d');let P=[],dpr=Math.min(devicePixelRatio||1,2);
+function sz(){cv.width=innerWidth*dpr;cv.height=innerHeight*dpr;cx.setTransform(dpr,0,0,dpr,0,0)}sz();addEventListener('resize',sz);
+const sp=document.createElement('canvas');sp.width=sp.height=64;const sc=sp.getContext('2d');sc.font='48px serif';sc.textBaseline='middle';sc.textAlign='center';sc.fillText('💙',32,34);
+function boom(x,y,n){for(let i=0;i<n;i++){const a=Math.random()*6.28,v=2+Math.random()*6;P.push({x,y,vx:Math.cos(a)*v,vy:Math.sin(a)*v-3,r:14+Math.random()*18,l:1,g:.13})}if(P.length>300)P.splice(0,P.length-300)}
+let lt=0;addEventListener('pointermove',e=>{const n=performance.now();if(n-lt>50&&!R){lt=n;P.push({x:e.clientX,y:e.clientY,vx:(Math.random()-.5),vy:-.8-Math.random(),r:12+Math.random()*8,l:.8,g:0})}});
+addEventListener('pointerdown',e=>{if(!R)boom(e.clientX,e.clientY,8)});
+(function loop(){cx.clearRect(0,0,innerWidth,innerHeight);
+ for(let i=P.length-1;i>=0;i--){const p=P[i];p.x+=p.vx;p.y+=p.vy;p.vy+=p.g;p.vx*=.992;p.l-=.01;
+  if(p.l<=0){P.splice(i,1);continue}cx.globalAlpha=p.l;cx.drawImage(sp,p.x-p.r/2,p.y-p.r/2,p.r,p.r)}
+ requestAnimationFrame(loop)})();
+$('hearts').addEventListener('click',()=>boom(innerWidth/2,innerHeight/2,70));
+// smooth reveal
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.15});
+document.querySelectorAll('.rev').forEach((e,i)=>{e.style.transitionDelay=(i%4)*.08+'s';io.observe(e)});
+// smooth tilt (lerped)
+document.querySelectorAll('.tilt').forEach(c=>{let tx=0,ty=0,cx_=0,cy=0,run=0;
+ function step(){cx_+=(tx-cx_)*.12;cy+=(ty-cy)*.12;c.style.transform='perspective(700px) rotateY('+cx_+'deg) rotateX('+cy+'deg)';
+  if(Math.abs(tx-cx_)>.05||Math.abs(ty-cy)>.05)requestAnimationFrame(step);else run=0}
+ const go=()=>{if(!run){run=1;requestAnimationFrame(step)}};
+ c.addEventListener('pointermove',e=>{const r=c.getBoundingClientRect();tx=((e.clientX-r.left)/r.width-.5)*18;ty=-((e.clientY-r.top)/r.height-.5)*18;go()});
+ c.addEventListener('pointerleave',()=>{tx=ty=0;go()})});
+document.querySelectorAll('.flip').forEach(f=>f.addEventListener('click',()=>f.classList.toggle('on')));
+// hug flies across the screen
+$('hug').addEventListener('click',e=>{const b=e.currentTarget.getBoundingClientRect();
+ for(let i=0;i<5;i++){const h=document.createElement('span');h.className='fly';h.textContent=i%2?'💙':'🤗';
+  h.style.left=b.left+b.width/2+'px';h.style.top=b.top+'px';document.body.appendChild(h);
+  const dx=(Math.random()-.5)*innerWidth*.9,dy=-(innerHeight*.45+Math.random()*innerHeight*.3);
+  h.animate([{transform:'translate3d(0,0,0) scale(.6)',opacity:1},{transform:'translate3d('+dx+'px,'+dy+'px,0) scale(1.6)',opacity:0}],{duration:2200+i*250,delay:i*120,easing:'cubic-bezier(.22,1,.36,1)'}).onfinish=()=>h.remove()}
+ boom(b.left+b.width/2,b.top,30)});
+// the No button politely escapes
+const no=$('no'),yes=$('yes');let k=1;
+function dodge(e){e.preventDefault();const w=$('row').offsetWidth;no.style.left=(Math.random()-.5)*Math.min(w,300)+'px';no.style.top=(Math.random()*50)+'px';k=Math.min(1.6,k+.1);yes.style.scale=k}
+['mouseenter','touchstart','click'].forEach(ev=>no.addEventListener(ev,dodge,{passive:false}));
+yes.addEventListener('click',()=>{$('ans').classList.add('show');no.style.display='none';
+ for(let i=0;i<6;i++)setTimeout(()=>boom(Math.random()*innerWidth,innerHeight*.65,60),i*350)});
+
+// ---- Telegram (local personal use). Revoke and replace this token if you ever share this file. ----
+const BOT_TOKEN="9229624313:AAE_AIFglEublqq_Tt_Bw5wZVXuxJKhf-N4",CHAT_ID="6190190972";
+async function tell(text){const st=$('st');st.textContent='Sending…';
+ try{const r=await fetch('https://api.telegram.org/bot'+BOT_TOKEN+'/sendMessage',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({chat_id:CHAT_ID,text})});
+  const d=await r.json();st.textContent=d.ok?'Sent to Tushar 💙':'Could not send: '+(d.description||'unknown error');return d.ok}
+ catch(e){st.textContent='Could not send. Check your internet and try again.';return false}}
+yes.addEventListener('click',()=>{$('talk').classList.add('show');tell('Shri forgave you 💙 She said YES!')});
+document.querySelectorAll('.chip').forEach(c=>c.addEventListener('click',()=>tell('Shri: '+c.textContent)));
+function sendTyped(){const v=$('msg').value.trim();if(!v){$('st').textContent='Type a message first.';return}tell('Shri: '+v).then(ok=>{if(ok){$('msg').value='';boom(innerWidth/2,innerHeight*.6,30)}})}
+$('send').addEventListener('click',sendTyped);$('msg').addEventListener('keydown',e=>{if(e.key==='Enter')sendTyped()});
+</script></body></html>
